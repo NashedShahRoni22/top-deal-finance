@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaClock, FaCalendarAlt } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import logo from "../../assets/LogoMark.PNG"
+import logo from "../../assets/LogoMark.png"
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
