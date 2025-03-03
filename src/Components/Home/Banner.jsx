@@ -45,7 +45,7 @@ export default function Banner() {
       className="mySwiper"
     >
       {banners.map((banner, i) => (
-        <SwiperSlide className="relative">
+        <SwiperSlide className="relative" key={i}>
           <img
             key={i}
             src={banner.image}
