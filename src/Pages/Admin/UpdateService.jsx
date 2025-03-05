@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import LoaderPage from "../../Components/Shared/LoaderPage";
 
 export default function UpdateService() {
-  const { id, slug } = useParams();
+  const { slug } = useParams();
   const [service, setService] = useState({});
   
 
@@ -28,7 +28,7 @@ export default function UpdateService() {
   useEffect(() => {
     setLoader(true);
     fetch(
-      `https://api.smartmovefinancial.com.au/api/service-details/${slug}`
+      `https://api.homegrowbd.com/api/service-details/${slug}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -59,7 +59,7 @@ export default function UpdateService() {
     formData.append("url", url);
     try {
       const response = await fetch(
-        `https://api.smartmovefinancial.com.au/api/service/update/${id}`,
+        `https://api.homegrowbd.com/api/service/update/${id}`,
         {
           method: "POST",
           body: formData,
@@ -129,14 +129,14 @@ export default function UpdateService() {
             type="text"
           />
           <label className="font-semibold">Content</label>
-          <ReactQuill theme="snow" value={value} onChange={setValue} />
-          <Button
+          {/* <ReactQuill theme="snow" value={value} onChange={setValue} /> */}
+          <button
             onClick={() => updateService(service?.id)}
             className="bg-primary mt-2.5 flex gap-2 items-center w-fit"
           >
             Update
             {updateLoader && <Spinner className="h-4 w-4" />}
-          </Button>
+          </button>
         </>
       )}
     </section>

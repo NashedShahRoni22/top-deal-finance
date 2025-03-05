@@ -49,8 +49,8 @@ export default function Testimonial() {
   ];
 
   return (
-    <div className="!p-8 md:!p-16 bg-gray-400 md:rounded">
-      <h2 className="text-center text-white text-4xl md:text-6xl font-semibold mt-5">
+    <div className="!p-8 md:!p-16 bg-gray-100 md:rounded">
+      <h2 className="text-center text-[#CEB666] text-4xl md:text-6xl font-semibold mt-5">
         What Our Clients Says?
       </h2>
       <>

@@ -1,4 +1,4 @@
-// import { Card, Typography } from "@material-tailwind/react";
+// import { Card, p } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 // import {
 //   Button,
@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 // } from "@material-tailwind/react";
 import { AiFillEye } from "react-icons/ai";
 import LoaderPage from "../../Components/Shared/LoaderPage";
+import { MdDelete } from "react-icons/md";
 const Appointment = () => {
   const [open, setOpen] = useState(false);
   const [loader, setLoader] = useState(true);
@@ -23,7 +24,7 @@ const Appointment = () => {
   };
   //get appointment..
   useEffect(() => {
-    fetch("https://api.smartmovefinancial.com.au/api/appointments")
+    fetch("https://api.homegrowbd.com/api/appointments")
       .then((res) => res.json())
       .then((data) => {
         setAppointments(data.data);
@@ -38,7 +39,7 @@ const Appointment = () => {
     );
     if (aggre) {
       fetch(
-        `https://api.smartmovefinancial.com.au/api/appointment/delete/${oneAppointment.id}`
+        `https://api.homegrowbd.com/api/appointment/delete/${oneAppointment.id}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -80,7 +81,7 @@ const Appointment = () => {
       pageNumbers.push(i);
     }
     return (
-      <div className="flex justify-center gap-2 mt-5">
+      <div className="flex justify-center gap-2 !mt-5">
         {pageNumbers.map((number) => (
           <button
             key={number}
@@ -96,143 +97,90 @@ const Appointment = () => {
     );
   };
   return (
-    <div>
-      <p className="p-5 text-xl font-semibold text-blue">
+    <div className="!mt-5 md:!mt-0 md:!p-5 lg:!p-10">
+      <p className="text-xl font-semibold text-blue">
         Total appointments : {appointments.length}
       </p>
-      {/* <div>
+      <div className="!mt-5">
         {loader ? (
           <LoaderPage />
         ) : (
-          <Card className="m-5 h-full overflow-auto">
-            <table className="w-full min-w-max table-auto text-left">
-              <thead>
-                <tr>
-                  {TABLE_HEAD.map((head) => (
-                    <th
-                      key={head}
-                      className="border-b border-blue-gray-100 bg-blue-gray-50 p-4"
+          <table className="w-full min-w-max table-auto text-left">
+            <thead>
+              <tr>
+                {TABLE_HEAD.map((head) => (
+                  <th
+                    key={head}
+                    className="border border-blue-500 bg-blue-500 text-white !p-4"
+                  >
+                    <p
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal leading-none opacity-70"
                     >
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal leading-none opacity-70"
-                      >
-                        {head}
-                      </Typography>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {currentAppointments?.map((appointment, i) => (
-                  <tr key={i} className="even:bg-blue-gray-50/50">
-                    <td className="p-4">
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal"
-                      >
-                        {appointment?.service_title}
-                      </Typography>
-                    </td>
-                    <td className="p-4">
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal"
-                      >
-                        {`${appointment?.first_name} ${appointment?.last_name}`}
-                      </Typography>
-                    </td>
-                    <td className="p-4">
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal"
-                      >
-                        {appointment?.phone}
-                      </Typography>
-                    </td>
-                    <td className="p-4">
-                      <Typography
-                        variant="small"
-                        color="blue-gray"
-                        className="font-normal"
-                      >
-                        {appointment?.email}
-                      </Typography>
-                    </td>
-                    <td className="p-4 flex">
-                      <button
-                        onClick={() => handleOpen(appointment)}
-                        className="px-2 py-1 shadow-md rounded-full border border-primary text-primary flex items-center gap-2"
-                      >
-                        <AiFillEye className="text-xl" />
-                        View
-                      </button>
-                    </td>
-                  </tr>
+                      {head}
+                    </p>
+                  </th>
                 ))}
-              </tbody>
-            </table>
-          </Card>
+              </tr>
+            </thead>
+            <tbody>
+              {currentAppointments?.map((appointment, i) => (
+                <tr key={i} className="bg-gray-100">
+                  <td className="!p-4">
+                    <p
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
+                    >
+                      {appointment?.service_title}
+                    </p>
+                  </td>
+                  <td className="!p-4">
+                    <p
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
+                    >
+                      {`${appointment?.first_name} ${appointment?.last_name}`}
+                    </p>
+                  </td>
+                  <td className="!p-4">
+                    <p
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
+                    >
+                      {appointment?.phone}
+                    </p>
+                  </td>
+                  <td className="!p-4">
+                    <p
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
+                    >
+                      {appointment?.email}
+                    </p>
+                  </td>
+                  <td className="!p-4 flex">
+                    <button
+                      onClick={() => handleOpen(appointment)}
+                      className="px-2 py-1 shadow-md rounded-full border border-primary text-primary flex items-center gap-2"
+                    >
+                      <MdDelete
+                        onClick={() => handaleDeleteAppointment(appointment)}
+                        className="text-3xl text-red-500 cursor-pointer"
+                      />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
         {renderPaginationButtons()}
-
-        <Dialog open={open} handler={handleOpen} size="lg">
-          <DialogHeader className="text-primary">
-            Loan type : {singleAppointment?.service_title}
-          </DialogHeader>
-
-          <DialogBody className="">
-            <p className="">
-              <span className="font-semibold text-primary"> Name : </span>
-              {`${singleAppointment?.first_name} ${singleAppointment?.last_name}`}
-            </p>
-            <p className="mt-2.5">
-              <span className="font-semibold text-primary">Phone : </span>
-              {singleAppointment?.phone}
-            </p>
-            <p className="mt-2.5 fo">
-              <span className="font-semibold text-primary">Email : </span>
-              {singleAppointment?.email}
-            </p>
-            <p className="mt-2.5">
-              <span className="font-semibold text-primary">Address : </span>
-              <br />
-              {singleAppointment?.location}
-            </p>
-            <p className="mt-2.5">
-              <span className="font-semibold text-primary">Message : </span>
-              <br />
-              {singleAppointment?.message}
-            </p>
-          </DialogBody>
-          <DialogFooter>
-            <div className="flex min-w-full">
-              <Button
-                onClick={handleOpen}
-                className="mr-4 bg-primary"
-                size="sm"
-              >
-                <span>Close</span>
-              </Button>
-              <Button
-                onClick={() => {
-                  handaleDeleteAppointment(singleAppointment);
-                  handleOpen();
-                }}
-                variant="gradient"
-                color="red"
-                size="sm"
-              >
-                <span>Delete</span>
-              </Button>
-            </div>
-          </DialogFooter>
-        </Dialog>
-      </div> */}
+      </div>
     </div>
   );
 };

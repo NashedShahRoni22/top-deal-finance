@@ -18,15 +18,15 @@ export default function Login() {
     }
   };
   return (
-    <section className="min-h-screen flex justify-center items-center bg-gray-200">
+    <section className="min-h-screen flex justify-center items-center bg-blue-200">
       <form
         onSubmit={handleLogin}
         className="w-3/4 md:w-1/2 lg:w-1/3 !p-5 md:!p-10 shadow rounded bg-white flex flex-col gap-2.5 md:gap-5"
       >
         <h5 className="font-semibold text-xl md:text-3xl">Login</h5>
-        <input className="!px-4 !py-2 border border-gray-400 rounded focus:outline-none" type="email" name="email" label="Enter Email" />
-        <input className="!px-4 !py-2 border border-gray-400 rounded focus:outline-none" type="password" name="password" label="Enter Password" />
-        <button className="!px-4 !py-2 border border-gray-400 bg-gray-400 rounded font-semibold" type="submit">Login</button>
+        <input className="!px-4 !py-2 border border-blue-500 rounded focus:outline-none" type="email" name="email" placeholder="Enter Email" />
+        <input className="!px-4 !py-2 border border-blue-500 rounded focus:outline-none" type="password" name="password" placeholder="Enter Password" />
+        <button className="!px-4 !py-2 border border-blue-500 bg-blue-500 text-white rounded font-semibold" type="submit">Login</button>
       </form>
     </section>
   );

@@ -13,8 +13,8 @@ export default function Home() {
       <Service/>
       <WeWorksWith/>
       <Features/>
-      <Faq/>
       <Testimonial/>
+      <Faq/>
     </section>
   )
 }

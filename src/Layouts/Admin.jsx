@@ -8,7 +8,7 @@ export default function Admin() {
   const [show, setShow] = useState(false)
   return (
     <section>
-      <div className='flex justify-between lg:hidden !p-5 bg-gray-400'>
+      <div className='flex justify-between lg:hidden !p-5 bg-blue-500 text-white'>
         <Link to='/'>Home</Link>
         <button onClick={() => setShow(!show)}>
           {show ? (

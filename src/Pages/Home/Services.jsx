@@ -12,7 +12,7 @@ const Services = () => {
   //get services
   useEffect(() => {
     setLoading(true);
-    fetch("https://api.smartmovefinancial.com.au/api/services")
+    fetch("https://api.homegrowbd.com/api/services")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {

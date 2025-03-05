@@ -4,7 +4,7 @@ import { FaCar } from "react-icons/fa6";
 
 export default function Service() {
   return (
-    <section className="!mb-16 !py-5 md:!py-10">
+    <section className="!py-10 md:!py-20">
       <h2 className="text-3xl font-semibold text-gray-800 text-center !mb-6">
         Our Services
       </h2>

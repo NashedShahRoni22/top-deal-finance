@@ -10,7 +10,7 @@ export default function GetService() {
   //get services
   useEffect(() => {
     setLoading(true);
-    fetch("https://api.smartmovefinancial.com.au/api/services")
+    fetch("https://api.homegrowbd.com/api/services")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {
@@ -23,7 +23,7 @@ export default function GetService() {
   const deleteService = async (id) => {
     try {
       const response = await fetch(
-        `https://api.smartmovefinancial.com.au/api/service/delete/${id}`,
+        `https://api.homegrowbd.com/api/service/delete/${id}`,
         {
           method: "GET",
         }
@@ -42,13 +42,13 @@ export default function GetService() {
     }
   };
   return (
-    <section className="mt-5 md:mt-0 md:p-5 lg:p-10">
+    <section className="!mt-5 md:!mt-0 md:!p-5 lg:!p-10">
       {loading ? (
         <LoaderPage />
       ) : (
         <>
           <h5 className="text-primary font-semibold text-xl">Total Services: {services.length}</h5>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
+          <div className="!mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
             {services?.map((s, i) => (
               <div
                 key={i}
@@ -65,26 +65,26 @@ export default function GetService() {
                     <BsEyeFill className="text-3xl text-white" />
                   </div>
                 </div>
-                <div className="p-4">
-                  <p className="text-xl font-semibold text-primary mt-3">
+                <div className="!p-4">
+                  <p className="text-xl font-semibold text-primary !mt-3">
                     {s?.title}
                   </p>
                   <p
-                    className="mt-2.5 mb-5 text-black"
+                    className="!mt-2.5 !mb-5 text-black"
                     dangerouslySetInnerHTML={{
                       __html: s?.content?.slice(0, 350),
                     }}
                   />
                   <div className="flex gap-2">
                     <Link
-                      to={`/admin/update_service/${s?.url}`}
-                      className="bg-primary text-white px-2.5 py-1.5 shadow rounded"
+                      to={`/admin/update_service/${s?.slug}`}
+                      className="bg-blue-500 w-1/2 text-center text-white !py-2 shadow rounded"
                     >
                       Update
                     </Link>
                     <button
                       onClick={() => deleteService(s?.id)}
-                      className="bg-red-400 text-white px-2.5 py-1.5 shadow rounded"
+                      className="bg-red-400 w-1/2 text-center text-white !py-2 shadow rounded"
                     >
                       Delete
                     </button>

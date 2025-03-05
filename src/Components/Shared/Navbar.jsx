@@ -53,8 +53,8 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Link className="!px-4 !py-2 bg-[#CEB666] font-semibold text-white rounded shadow">
-            Get Started
+          <Link to={"/book-appointment"} className="!px-4 !py-2 bg-[#CEB666] font-semibold text-white rounded shadow">
+            Book Now
           </Link>
         </div>
       </div>

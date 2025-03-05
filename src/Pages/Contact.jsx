@@ -1,7 +1,5 @@
-// import { Input, Spinner } from "@material-tailwind/react";
-// import { Textarea } from "@material-tailwind/react";
-// import yellowLine from "../assets/lines/yellow_line.png";
 import { useState } from "react";
+import { FaSpinner } from "react-icons/fa6";
 
 export default function Contact() {
   const [loader, setLoader] = useState(false);
@@ -31,7 +29,7 @@ export default function Contact() {
     formData.append("message", message);
     try {
       const response = await fetch(
-        "https://api.smartmovefinancial.com.au/api/contact/store",
+        "https://api.homegrowbd.com/api/contact/store",
         {
           method: "POST",
           body: formData,
@@ -70,7 +68,7 @@ export default function Contact() {
                 size="lg"
                 placeholder="Name"
                 name="name"
-                className="!px-4 !py-2 border rounded"
+                className="!px-4 !py-2 border rounded focus:outline-none"
                 required
               />
               <input
@@ -78,7 +76,7 @@ export default function Contact() {
                 size="lg"
                 placeholder="Email"
                 name="email"
-                className="!px-4 !py-2 border rounded"
+                className="!px-4 !py-2 border rounded focus:outline-none"
                 required
               />
               <input
@@ -86,7 +84,7 @@ export default function Contact() {
                 size="lg"
                 placeholder="Phone"
                 name="phone"
-                className="!px-4 !py-2 border rounded"
+                className="!px-4 !py-2 border rounded focus:outline-none"
                 required
               />
               <input
@@ -94,7 +92,7 @@ export default function Contact() {
                 size="lg"
                 placeholder="Address"
                 name="address"
-                className="!px-4 !py-2 border rounded"
+                className="!px-4 !py-2 border rounded focus:outline-none"
                 required
               />
               <textarea
@@ -102,15 +100,15 @@ export default function Contact() {
                 rows={6}
                 placeholder="Your Message"
                 name="message"
-                className="!px-4 !py-2 border rounded"
+                className="!px-4 !py-2 border rounded focus:outline-none"
                 required
               />
               <button
                 type="submit"
-                className="!px-2 md:!px-4 !py-2 text-xs md:text-base w-fit bg-[#110D0C] text-white rounded flex gap-2 justify-center items-center"
+                className="!px-2 md:!px-4 !py-2 text-xs md:text-base w-fit bg-[#CEB666] text-white rounded flex gap-2 justify-center items-center cursor-pointer"
               >
                 Send Message
-                {/* {loader && <Spinner className="h-4 w-4" />} */}
+                {loader && <FaSpinner className="h-4 w-4 animate-spin" />}
               </button>
             </form>
           </div>

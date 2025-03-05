@@ -12,6 +12,8 @@ import ContactMessage from "../Pages/Admin/ContactMessage";
 import Contact from "../Pages/Contact";
 import About from "../Pages/About";
 import NotFound from "../Components/Shared/NotFound";
+import BookingForm from "../Components/Shared/BookingForm";
+import Service from "../Pages/Service/Service";
 
 export const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/book-appointment",
+        element: <BookingForm />,
+      },
+      {
+        path: "/services",
+        element: <Service />,
       },
     ],
   },

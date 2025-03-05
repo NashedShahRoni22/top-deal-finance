@@ -51,7 +51,7 @@ export default function Faq() {
   ];
 
   return (
-    <div className="!py-8 md:!py-16">
+    <div className="!py-10 md:!py-20">
       <h2 className="text-4xl md:text-6xl font-semibold text-center">
         Frequently asked question
       </h2>
