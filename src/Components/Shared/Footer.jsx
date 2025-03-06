@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row gap-12">
           {/* Newsletter Section */}
           <div className="newsletter space-y-4 md:w-1/2">
-            <h3 className="text-2xl font-semibold text-center md:text-left">
+            <h3 className="md:text-xl text-[#CEB666] font-semibold text-center md:text-left">
               Subscribe to our Newsletter
             </h3>
             <form
@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="md:w-1/2 flex flex-col gap-5 md:flex-row justify-between flex-1">
             {/* Quick Links Section */}
             <div className="quick-links space-y-4">
-              <h4 className="text-xl font-semibold text-center md:text-left">
+              <h4 className="md:text-xl text-[#CEB666] font-semibold text-center md:text-left">
                 Quick Links
               </h4>
               <ul className="space-y-2 !mt-4 text-center md:text-left">
@@ -76,7 +76,7 @@ export default function Footer() {
 
             {/* Social Icons Section */}
             <div className="social-icons space-y-4">
-              <h4 className="text-xl font-semibold text-center md:text-left">
+              <h4 className="md:text-xl text-[#CEB666] font-semibold text-center md:text-left">
                 Follow Us
               </h4>
               <div className="flex justify-center md:justify-start gap-5 space-x-4 !mt-4">

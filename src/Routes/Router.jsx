@@ -13,7 +13,7 @@ import Contact from "../Pages/Contact";
 import About from "../Pages/About";
 import NotFound from "../Components/Shared/NotFound";
 import BookingForm from "../Components/Shared/BookingForm";
-import Service from "../Pages/Service/Service";
+import Services from "../Pages/Home/Services";
 
 export const router = createBrowserRouter([
   {
@@ -38,7 +38,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: <Service />,
+        element: <Services />,
       },
     ],
   },
@@ -67,7 +67,7 @@ export const router = createBrowserRouter([
         element: <GetService />,
       },
       {
-        path: "/admin/update_service/:slug",
+        path: "/admin/update_service/:slug/:id",
         element: <UpdateService />,
       },
       {

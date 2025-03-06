@@ -2,6 +2,7 @@ import { useState } from "react";
 import SunEditor from "suneditor-react";
 import "suneditor/dist/css/suneditor.min.css";
 import { useNavigate } from "react-router-dom";
+import { FaSpinner } from "react-icons/fa6";
 
 export default function AdminAddService() {
   const navigate = useNavigate();
@@ -69,6 +70,9 @@ export default function AdminAddService() {
           className="flex gap-2 items-center !px-6 !py-2.5 bg-blue-500 text-white rounded hover:bg-blue-600 transition-all cursor-pointer"
         >
           Submit
+          {
+            loader && <FaSpinner className="text-xl animate-spin"/>
+          }
         </button>
       </div>
 

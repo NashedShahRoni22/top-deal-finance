@@ -15,7 +15,7 @@ export default function BookingForm() {
 
   //get services
   useEffect(() => {
-    fetch("https://api.smartmovefinancial.com.au/api/services")
+    fetch("https://api.homegrowbd.com/api/services")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {
@@ -49,7 +49,7 @@ export default function BookingForm() {
       );
       const data = await response.json();
       if (data.status === true) {
-        window.alert(data.msg);
+        window.alert("Apointment booked successfully. Our agent will reach you soon.");
         //   handleOpen();
         setLoader(false);
       }

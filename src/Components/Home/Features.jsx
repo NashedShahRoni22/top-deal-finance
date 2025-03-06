@@ -50,7 +50,7 @@ export default function Features() {
 
   return (
     <div className="!py-10 md:!py-20">
-      <h2 className="text-4xl md:text-6xl font-semibold text-center">
+      <h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold text-center">
         What are you looking to do?
       </h2>
 
@@ -62,8 +62,8 @@ export default function Features() {
             className="!p-4 min-w-full shadow rounded"
           >
             <div className="text-[#CEB666]">{feature.icon}</div>
-            <h5 className="font-semibold text-xl !my-2.5">{feature.title}</h5>
-            <p className="text-gray-600">{feature.description}</p>
+            <h5 className="font-semibold md:text-xl !my-2.5">{feature.title}</h5>
+            <p className="text-gray-600 text-sm">{feature.description}</p>
           </div>
         ))}
       </div>

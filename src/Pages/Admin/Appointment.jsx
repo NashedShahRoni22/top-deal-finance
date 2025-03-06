@@ -1,28 +1,13 @@
-// import { Card, p } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
-// import {
-//   Button,
-//   Dialog,
-//   DialogHeader,
-//   DialogBody,
-//   DialogFooter,
-// } from "@material-tailwind/react";
-import { AiFillEye } from "react-icons/ai";
 import LoaderPage from "../../Components/Shared/LoaderPage";
 import { MdDelete } from "react-icons/md";
 const Appointment = () => {
-  const [open, setOpen] = useState(false);
   const [loader, setLoader] = useState(true);
   const [appointments, setAppointments] = useState([]);
-  const [singleAppointment, setSingleAppointment] = useState({});
 
-  const TABLE_HEAD = ["Loan type", "Name", "Phone number", "Email", "View"];
+  const TABLE_HEAD = ["Loan type", "Name", "Phone number", "Email", "Message", "Action"];
 
-  const handleOpen = (data) => {
-    setOpen(!open);
-    setSingleAppointment(data);
-  };
-  //get appointment..
+  //get appointment
   useEffect(() => {
     fetch("https://api.homegrowbd.com/api/appointments")
       .then((res) => res.json())
@@ -86,7 +71,7 @@ const Appointment = () => {
           <button
             key={number}
             onClick={() => paginate(number)}
-            className={`px-4 py-2 rounded-full border ${
+            className={`!px-4 !py-2 rounded-full border ${
               currentPage === number ? "bg-blue-500 text-white" : ""
             }`}
           >
@@ -99,7 +84,7 @@ const Appointment = () => {
   return (
     <div className="!mt-5 md:!mt-0 md:!p-5 lg:!p-10">
       <p className="text-xl font-semibold text-blue">
-        Total appointments : {appointments.length}
+        Appointments : {appointments.length}
       </p>
       <div className="!mt-5">
         {loader ? (
@@ -163,16 +148,20 @@ const Appointment = () => {
                       {appointment?.email}
                     </p>
                   </td>
-                  <td className="!p-4 flex">
-                    <button
-                      onClick={() => handleOpen(appointment)}
-                      className="px-2 py-1 shadow-md rounded-full border border-primary text-primary flex items-center gap-2"
+                  <td className="!p-4">
+                    <p
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal"
                     >
-                      <MdDelete
-                        onClick={() => handaleDeleteAppointment(appointment)}
-                        className="text-3xl text-red-500 cursor-pointer"
-                      />
-                    </button>
+                      {appointment?.message}
+                    </p>
+                  </td>
+                  <td className="!p-4 flex">
+                    <MdDelete
+                      onClick={() => handaleDeleteAppointment(appointment)}
+                      className="text-3xl text-red-500 cursor-pointer"
+                    />
                   </td>
                 </tr>
               ))}

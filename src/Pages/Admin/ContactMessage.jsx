@@ -90,7 +90,7 @@ const ContactMessage = () => {
   return (
     <div className="!mt-5 md:!mt-0 md:!p-5 lg:!p-10">
       <p className="text-xl font-semibold text-blue">
-        Contact Message : {appointments.length}
+        Messages : {appointments.length}
       </p>
       <div className="!mt-5">
         {loader ? (

@@ -77,7 +77,7 @@ export default function GetService() {
                   />
                   <div className="flex gap-2">
                     <Link
-                      to={`/admin/update_service/${s?.slug}`}
+                      to={`/admin/update_service/${s?.slug}/${s?.id}`}
                       className="bg-blue-500 w-1/2 text-center text-white !py-2 shadow rounded"
                     >
                       Update

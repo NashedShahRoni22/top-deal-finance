@@ -52,7 +52,7 @@ export default function Faq() {
 
   return (
     <div className="!py-10 md:!py-20">
-      <h2 className="text-4xl md:text-6xl font-semibold text-center">
+      <h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold text-center">
         Frequently asked question
       </h2>
       {/* Mortgage Broker Features Cards */}
@@ -63,7 +63,7 @@ export default function Faq() {
             className="!p-4 min-w-full border-b border-[#CEB666]"
           >
             <div className="flex justify-between items-center">
-              <h5 className="font-semibold text-2xl !my-2.5 w-5/6">{faq.question}</h5>
+              <h5 className="font-semibold md:text-xl !my-2.5 w-5/6">{faq.question}</h5>
               <div>
                 {show.id === index && show.state ? (
                   <FaMinus onClick={()=>{
@@ -83,7 +83,7 @@ export default function Faq() {
               </div>
             </div>
             {show.id === index && show.state && (
-              <p className="text-gray-600">{faq.answer}</p>
+              <p className="text-gray-600 text-sm">{faq.answer}</p>
             )}
           </div>
         ))}
