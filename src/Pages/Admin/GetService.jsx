@@ -70,12 +70,12 @@ export default function GetService() {
                     {s?.title}
                   </p>
                   <p
-                    className="!mt-2.5 !mb-5 text-black"
+                    className="!mt-2.5 text-sm text-gray-600"
                     dangerouslySetInnerHTML={{
-                      __html: s?.content?.slice(0, 350),
+                      __html: s?.content?.slice(0, 300),
                     }}
                   />
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 !mt-5">
                     <Link
                       to={`/admin/update_service/${s?.slug}/${s?.id}`}
                       className="bg-blue-500 w-1/2 text-center text-white !py-2 shadow rounded"

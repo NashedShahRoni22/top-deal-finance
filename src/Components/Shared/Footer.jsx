@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white !py-8 md:!py-16 ">
+    <footer className="bg-[#110D0E] text-white !py-8 md:!py-16 ">
       <div className="!mx-5 md:w-5/6 md:!mx-auto">
         <div className="flex flex-col md:flex-row gap-12">
           {/* Newsletter Section */}

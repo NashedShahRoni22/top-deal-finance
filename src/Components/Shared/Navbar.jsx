@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import logo from "../../assets/LogoMark.png"
+import logo from "../../assets/SideLogo.png";
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
@@ -25,8 +25,8 @@ export default function Navbar() {
     },
   ];
   return (
-    <nav className="!py-5 relative border-b-2">
-      <div className="flex items-center justify-between">
+    <nav className="!py-5 relative bg-[#110D0E] text-white">
+      <div className="flex items-center justify-between !mx-5 md:w-5/6 md:!mx-auto">
         <div className="flex items-center gap-4">
           <div className="lg:hidden">
             {showNav ? (
@@ -41,26 +41,33 @@ export default function Navbar() {
               />
             )}
           </div>
-          <img src={logo} className="h-[40px] rounded" alt="" />
-        </div>
-        {/* Desktop Menus  */}
-        <div className="hidden lg:flex gap-8">
-          {NavItems.map((navItem, index) => (
-            <Link key={index} to={navItem.link} className="font-semibold">
-              {navItem.name}
-            </Link>
-          ))}
+          <img
+            src={logo}
+            className="hidden lg:block h-[100px] rounded"
+            alt=""
+          />
         </div>
 
         <div className="flex items-center gap-4">
-          <Link to={"/book-appointment"} className="!px-4 !py-2 bg-[#CEB666] font-semibold text-white rounded shadow">
+          {/* Desktop Menus  */}
+          <div className="hidden lg:flex gap-8">
+            {NavItems.map((navItem, index) => (
+              <Link key={index} to={navItem.link} className="font-semibold">
+                {navItem.name}
+              </Link>
+            ))}
+          </div>
+          <Link
+            to={"/book-appointment"}
+            className="!px-4 !py-2 bg-[#CEB666] font-semibold text-white rounded shadow"
+          >
             Book Now
           </Link>
         </div>
       </div>
       {/* Mobile Menus  */}
       {showNav && (
-        <div className="absolute z-50 top-[50px] !p-4 bg-white w-1/2 shadow rounded flex flex-col lg:hidden gap-4">
+        <div className="absolute z-50 top-[50px] !p-4 bg-white text-black w-1/2 shadow rounded flex flex-col lg:hidden gap-4">
           {NavItems.map((navItem, index) => (
             <Link key={index} to={navItem.link} className="font-semibold">
               {navItem.name}

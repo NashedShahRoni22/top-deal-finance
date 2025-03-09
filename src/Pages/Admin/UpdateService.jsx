@@ -13,7 +13,6 @@ export default function UpdateService() {
 
   // Manage data
   const [thumbnail, setThumbnail] = useState("");
-  console.log(thumbnail);
   const [title, setTitle] = useState("");
   const [metaTitle, setMetaTitle] = useState("");
   const [metaDescription, setMetaDescription] = useState("");
@@ -105,13 +104,13 @@ export default function UpdateService() {
             </label>
           </div>
           {thumbnail && typeof thumbnail === "string" ? (
-            <img src={thumbnail} alt="Thumbnail" className="h-80 w-auto" />
+            <img src={thumbnail} alt="Thumbnail" className="w-full h-[250px] md:h-[400px] object-fill" />
           ) : (
             thumbnail && (
               <img
                 src={URL.createObjectURL(thumbnail)}
                 alt="Thumbnail"
-                className="h-80 w-auto"
+                className="w-full h-[250px] md:h-[400px] object-fill"
               />
             )
           )}
@@ -159,7 +158,7 @@ export default function UpdateService() {
           <SunEditor
             setContents={editorContent}
             onChange={handleEditorChange}
-            height="220px"
+            height="600px"
             setOptions={{
               buttonList: [
                 [

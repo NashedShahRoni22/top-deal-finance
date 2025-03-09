@@ -22,7 +22,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="!p-8 md:!p-16 bg-gray-100">
+    <section className="!p-8 md:!p-16">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-2xl md:text-4xl lg:text-6xl text-center font-semibold">
           Our Services
@@ -33,15 +33,15 @@ const Services = () => {
       ) : (
         <>
           <div className="!mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
-            {services.slice(0, showNum).map((loan, i) => (
+            {services.slice(0, showNum).map((service, i) => (
               <Link
                 key={i}
-                to={`/service/${loan?.url}`}
+                to={`/service/${service?.url}`}
                 className="rounded shadow-xl group"
               >
                 <div className="overflow-hidden relative">
                   <img
-                    src={loan?.thumbnail}
+                    src={service?.thumbnail}
                     alt=""
                     className="h-[200px] w-full group-hover:scale-110 group-hover:rotate-3 duration-300 ease-linear rounded"
                     loading="lazy"
@@ -52,12 +52,12 @@ const Services = () => {
                 </div>
                 <div className="!p-4 bg-white">
                   <p className="text-xl font-semibold text-primary !mt-2.5">
-                    {loan?.title}
+                    {service?.title}
                   </p>
                   <div
                     className="!mt-2.5 text-sm text-gray-600"
                     dangerouslySetInnerHTML={{
-                      __html: loan?.content?.slice(0, 300),
+                      __html: service?.content?.slice(0, 300),
                     }}
                   />
                   <button className="!mt-5 !p-2 border border-[#CEB666] w-fit rounded bg-black text-[#CEB666] duration-300 ease-linear flex items-center gap-2">

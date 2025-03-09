@@ -27,10 +27,10 @@ export default function AdminAddService() {
     formData.append("title", title);
     formData.append("meta_title", meta_title);
     formData.append("meta_description", meta_description);
-    formData.append("url", meta_description); // I'm assuming you're using meta_description as the URL
+    formData.append("url", meta_description);
     formData.append("thumbnail", thumbnail);
     formData.append("slogan", slogan);
-    formData.append("content", editorContent); // append editor content here
+    formData.append("content", editorContent);
 
     try {
       const response = await fetch(

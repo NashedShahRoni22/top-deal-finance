@@ -49,7 +49,7 @@ export default function Banner() {
           <img
             key={i}
             src={banner.image}
-            className="lg:!h-[80vh] rounded"
+            className="lg:!h-[80vh]"
             alt=""
           />
           <div className="absolute top-0 bg-black/30 h-full w-full z-50 flex justify-center items-center rounded">

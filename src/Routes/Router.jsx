@@ -14,6 +14,7 @@ import About from "../Pages/About";
 import NotFound from "../Components/Shared/NotFound";
 import BookingForm from "../Components/Shared/BookingForm";
 import Services from "../Pages/Home/Services";
+import ServiceDetails from "../Pages/Home/ServiceDetails";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/service/:url",
+        element: <ServiceDetails />,
       },
     ],
   },
