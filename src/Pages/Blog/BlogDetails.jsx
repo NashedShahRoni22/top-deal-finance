@@ -11,7 +11,7 @@ export default function BlogDetails() {
   //get service
   useEffect(() => {
     setLoader(true);
-    fetch(`https://api.homegrowbd.com/api/blog/${url}`)
+    fetch(`https://api.homegrowbd.com/api/blogs/${url}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {

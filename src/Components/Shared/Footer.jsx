@@ -41,7 +41,7 @@ export default function Footer() {
               <ul className="space-y-2 !mt-4 text-center md:text-left">
                 <li>
                   <Link
-                    to="/home"
+                    to="/"
                     className="hover:text-yellow-400 transition duration-300"
                   >
                     Home

@@ -23,6 +23,10 @@ export default function Navbar() {
       name: "Contact",
       link: "/contact",
     },
+    {
+      name: "Blogs",
+      link: "/blogs",
+    },
   ];
   return (
     <nav className="!py-5 relative bg-[#110D0E] text-white">
@@ -69,7 +73,7 @@ export default function Navbar() {
       </div>
       {/* Mobile Menus  */}
       {showNav && (
-        <div className="absolute z-50 top-[50px] !p-4 bg-white text-black w-1/2 shadow rounded flex flex-col lg:hidden gap-4">
+        <div className="absolute z-50 top-[60px] left-[15px] !p-4 bg-white text-black w-1/2 shadow rounded flex flex-col lg:hidden gap-4">
           {NavItems.map((navItem, index) => (
             <Link key={index} to={navItem.link} className="font-semibold">
               {navItem.name}
