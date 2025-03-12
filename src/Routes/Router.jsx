@@ -13,8 +13,13 @@ import Contact from "../Pages/Contact";
 import About from "../Pages/About";
 import NotFound from "../Components/Shared/NotFound";
 import BookingForm from "../Components/Shared/BookingForm";
-import Services from "../Pages/Home/Services";
-import ServiceDetails from "../Pages/Home/ServiceDetails";
+import Services from "../Pages/Service/Services";
+import ServiceDetails from "../Pages/Service/ServiceDetails";
+import AdminAddBlog from "../Pages/Admin/AdminAddBlog";
+import GetBlog from "../Pages/Admin/GetBlog";
+import UpdateBlog from "../Pages/Admin/UpdateBlog";
+import Blogs from "../Pages/Blog/Blogs";
+import BlogDetails from "../Pages/Blog/BlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +49,14 @@ export const router = createBrowserRouter([
       {
         path: "/service/:url",
         element: <ServiceDetails />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      {
+        path: "/blog/:url",
+        element: <BlogDetails />,
       },
     ],
   },
@@ -78,6 +91,18 @@ export const router = createBrowserRouter([
       {
         path: "/admin/contact_message",
         element: <ContactMessage />,
+      },
+      {
+        path: "/admin/add_blog",
+        element: <AdminAddBlog />,
+      },
+      {
+        path: "/admin/manage_blog",
+        element: <GetBlog />,
+      },
+      {
+        path: "/admin/update_blog/:slug/:id",
+        element: <UpdateBlog />,
       },
     ],
   },

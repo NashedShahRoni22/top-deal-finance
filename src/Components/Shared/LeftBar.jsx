@@ -2,6 +2,7 @@ import React from "react";
 import { GoSignOut } from "react-icons/go";
 import { FaCalendarAlt, FaEnvelope, FaPlusCircle, FaCogs } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaBlog } from "react-icons/fa6";
 
 export default function LeftBar({ setShow }) {
   const menus = [
@@ -24,6 +25,16 @@ export default function LeftBar({ setShow }) {
       name: "Manage Service",
       link: "/admin/manage_service",
       icon: <FaCogs />,
+    },
+    {
+      name: "Add Blog",
+      link: "/admin/add_blog",
+      icon: <FaPlusCircle />,
+    },
+    {
+      name: "Manage Blog",
+      link: "/admin/manage_blog",
+      icon: <FaBlog/>,
     },
   ];
 

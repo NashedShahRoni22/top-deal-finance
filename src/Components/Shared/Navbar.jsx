@@ -41,11 +41,13 @@ export default function Navbar() {
               />
             )}
           </div>
-          <img
-            src={logo}
-            className="hidden lg:block h-[100px] rounded"
-            alt=""
-          />
+          <Link to={"/"}>
+            <img
+              src={logo}
+              className="hidden lg:block h-[100px] rounded"
+              alt=""
+            />
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">
