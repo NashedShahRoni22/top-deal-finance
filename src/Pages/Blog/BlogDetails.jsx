@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import LoaderPage from "../../Components/Shared/LoaderPage";
 import { Helmet } from "react-helmet";
+import "../preview.css";
 
 export default function BlogDetails() {
   const { url } = useParams();
@@ -35,19 +36,32 @@ export default function BlogDetails() {
               <img
                 src={service?.thumbnail}
                 alt=""
-                className="w-full h-[250px] md:h-[400px] object-fill"
+                className="w-full h-[300px] md:h-[450px] lg:h-[600px] object-fill"
                 loading="lazy"
               />
             </div>
-
-            <h1 className="text-xl md:text-3xl text-orange-800 font-bold">
-              {service?.slogan}
-            </h1>
-            <p className="md:text-xl font-semibold text-primary">
+            <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-orange-800">
               {service?.title}
-            </p>
-            <div dangerouslySetInnerHTML={{ __html: service?.content }} />
+            </h1>
+            <p className="text-xl md:text-2xl">{service?.slogan}</p>
+            <div
+              id="preview"
+              dangerouslySetInnerHTML={{ __html: service?.content }}
+            />
           </div>
+          <section className="text-center !py-5 md:!py-10 bg-gray-500 text-white rounded">
+            <h2 className="text-3xl font-semibold !mb-4">Contact Us Today!</h2>
+            <p className="text-lg !mb-6">
+              Ready to secure your loan? Contact us now to speak with a loan
+              specialist who can help you get started.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block !px-6 !py-2.5 bg-[#CEB666] text-white text-lg font-semibold rounded-lg hover:bg-gray-500 transition duration-300"
+            >
+              Get Started
+            </Link>
+          </section>
         </section>
       )}
     </>

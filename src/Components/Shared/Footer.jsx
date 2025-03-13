@@ -49,6 +49,14 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    to="/services"
+                    className="hover:text-yellow-400 transition duration-300"
+                  >
+                    Secvices
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/about"
                     className="hover:text-yellow-400 transition duration-300"
                   >

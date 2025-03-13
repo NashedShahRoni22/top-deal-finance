@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import LoaderPage from "../../Components/Shared/LoaderPage";
 import { Helmet } from "react-helmet";
+import "../preview.css";
+import Testimonial from "../../Components/Home/Testimonial";
+import Faq from "../../Components/Home/Faq";
 
 export default function ServiceDetails() {
   const { url } = useParams();
@@ -35,7 +38,7 @@ export default function ServiceDetails() {
               <img
                 src={service?.thumbnail}
                 alt=""
-                className="w-full h-[250px] md:h-[400px] object-fill"
+                className="w-full h-[300px] md:h-[450px] lg:h-[600px] object-fill"
                 loading="lazy"
               />
             </div>
@@ -46,8 +49,10 @@ export default function ServiceDetails() {
             <p className="md:text-xl font-semibold text-primary">
               {service?.title}
             </p>
-            <div dangerouslySetInnerHTML={{ __html: service?.content }} />
+            <div id="preview" dangerouslySetInnerHTML={{ __html: service?.content }} />
           </div>
+          <Testimonial/>
+          <Faq/>
         </section>
       )}
     </>

@@ -5,7 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 import LoaderPage from "../../Components/Shared/LoaderPage";
 const Services = () => {
   const [loading, setLoading] = useState(false);
-  const [showNum, setShowNum] = useState(8);
+  const [showNum, setShowNum] = useState(9);
   const [services, setServices] = useState([]);
 
   //get services
@@ -43,7 +43,7 @@ const Services = () => {
                   <img
                     src={service?.thumbnail}
                     alt=""
-                    className="h-[200px] w-full group-hover:scale-110 group-hover:rotate-3 duration-300 ease-linear rounded"
+                    className="h-[250px] w-full group-hover:scale-110 group-hover:rotate-3 duration-300 ease-linear rounded"
                     loading="lazy"
                   />
                   <div className="absolute top-0 h-full w-full bg-black/60 hidden group-hover:flex justify-center items-center duration-300 ease-linear rounded">
@@ -60,7 +60,7 @@ const Services = () => {
                       __html: service?.content?.slice(0, 300),
                     }}
                   />
-                  <button className="!mt-5 !p-2 border border-[#CEB666] w-fit rounded bg-black text-[#CEB666] duration-300 ease-linear flex items-center gap-2">
+                  <button className="!mt-5 !p-2 border border-[#CEB666] w-fit rounded bg-black text-[#CEB666] duration-300 ease-linear flex items-center gap-2 cursor-pointer">
                     Learn More
                     <MdArrowOutward className="text-xl group-hover:rotate-45 duration-300 ease-linear" />
                   </button>
@@ -68,19 +68,19 @@ const Services = () => {
               </Link>
             ))}
           </div>
-          {services?.length > 8 && (
-            <div className="flex justify-center mt-10 md:mt-20">
-              {showNum === 8 ? (
+          {services?.length > 9 && (
+            <div className="flex justify-center !mt-10 md:!mt-20">
+              {showNum === 9 ? (
                 <button
                   onClick={() => setShowNum(services.length)}
-                  className="px-4 py-2 border border-primary rounded-full"
+                  className="!px-4 !py-2 border rounded-full"
                 >
                   Explore More
                 </button>
               ) : (
                 <button
-                  onClick={() => setShowNum(8)}
-                  className="px-4 py-2 border border-primary rounded-full"
+                  onClick={() => setShowNum(9)}
+                  className="!px-4 !py-2 border rounded-full"
                 >
                   View Less
                 </button>

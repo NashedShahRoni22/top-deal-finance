@@ -58,7 +58,7 @@ export default function Navbar() {
           {/* Desktop Menus  */}
           <div className="hidden lg:flex gap-8">
             {NavItems.map((navItem, index) => (
-              <Link key={index} to={navItem.link} className="font-semibold">
+              <Link key={index} to={navItem.link} className="font-semibold hover:text-[#CEB666] ease-linear duration-300">
                 {navItem.name}
               </Link>
             ))}

@@ -1,30 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaHome, FaCar, FaUserAlt } from "react-icons/fa";
+import { FaHome, FaCar, FaUserAlt, FaHandHoldingUsd, FaFileAlt } from "react-icons/fa";
 import { GiReceiveMoney } from "react-icons/gi";
+import { FaBuilding, FaChartLine, FaLock, FaWallet } from "react-icons/fa6";
 
 export default function About() {
   return (
     <div className="container mx-auto !p-8">
       {/* Header Section */}
-      <header className="text-center !mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">
-          About Top Deal Finance
-        </h1>
-        <p className="text-lg text-gray-600 !mt-8">
-          At Top Deal Finance, we pride ourselves on being a trusted and
-          reliable partner for all your loan needs. With years of experience in
-          the industry, we have built a reputation for helping individuals and
-          families secure the best loan deals in the market. Our team of experts
-          works with each client individually, understanding their unique
-          financial needs and finding tailored solutions that fit their goals.
-          We are committed to making the loan process as smooth and stress-free
-          as possible.
-        </p>
-      </header>
+      <section className="flex flex-col md:flex-row items-center !mb-16 !py-5 md:!py-10 gap-8">
+        <div className="md:w-1/2">
+          <h1 className="text-4xl font-bold text-gray-800">
+            About Top Deal Finance
+          </h1>
+          <p className="text-lg text-gray-600 !mt-8">
+            <b>Varjeet Singh</b> is the dedicated owner of Top Deal Finance,
+            where he brings years of industry experience and a deep commitment
+            to providing personalized financial solutions. With a focus on home,
+            car, personal, and investment mortgages, Varjeet has built a
+            reputation as a trusted partner for individuals and families seeking
+            the best loan deals. His approach is rooted in understanding the
+            unique financial needs of each client, and he works tirelessly to
+            find the right solutions that align with their goals. Varjeet’s
+            leadership and expertise ensure that the loan process remains
+            smooth, transparent, and stress-free for every client he serves.
+          </p>
+          <p className="text-lg text-gray-600 !mt-8">
+            At Top Deal Finance, we pride ourselves on being a trusted and
+            reliable partner for all your loan needs. With years of experience
+            in the industry, we have built a reputation for helping individuals
+            and families secure the best loan deals in the market. Our team of
+            experts works with each client individually, understanding their
+            unique financial needs and finding tailored solutions that fit their
+            goals. We are committed to making the loan process as smooth and
+            stress-free as possible.
+          </p>
+        </div>
+        <div className="md:w-1/2">
+          <img src="https://pacificfinance.com.au/wp-content/uploads/2021/06/PF-Commercial_0070-1024x727.jpg" />
+        </div>
+      </section>
 
       {/* Mission Section */}
-      <section className="flex flex-col md:flex-row items-center !mb-16 !py-5 md:!py-10">
+      <section className="flex flex-col md:flex-row-reverse items-center !mb-16 !py-5 md:!py-10 gap-8">
         <div className="md:w-1/2 !px-6 !mb-6 md:!mb-0">
           <h2 className="text-3xl font-semibold text-gray-800">Our Mission</h2>
           <p className="text-lg text-gray-600 !mt-4">
@@ -46,7 +64,7 @@ export default function About() {
 
       {/* Vision Section */}
       <section className="!mb-16 !py-5">
-        <div className="flex flex-col md:flex-row-reverse items-center">
+        <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2 !px-6 !mb-6 md:!mb-0">
             <h2 className="text-3xl font-semibold text-gray-800">Our Vision</h2>
             <p className="text-lg text-gray-600">
@@ -68,38 +86,6 @@ export default function About() {
               alt="Vision"
               className="w-full h-auto rounded-lg shadow-lg"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="!mb-16 !py-5 md:!py-10">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center !mb-6">
-          Our Services
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-          <div className="!p-6 bg-white flex flex-col items-center rounded-lg shadow-md">
-            <FaHome className="text-4xl text-[#CEB666] !mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-gray-800">Home Loans</h3>
-            <p className="text-gray-600 !mt-2">
-              Tailored solutions to help you buy your home with ease.
-            </p>
-          </div>
-          <div className="!p-6 bg-white flex flex-col items-center rounded-lg shadow-md">
-            <FaCar className="text-4xl text-[#CEB666] !mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-gray-800">Car Loans</h3>
-            <p className="text-gray-600 !mt-2">
-              Affordable rates for new or used vehicles.
-            </p>
-          </div>
-          <div className="!p-6 bg-white flex flex-col items-center rounded-lg shadow-md">
-            <FaUserAlt className="text-4xl text-[#CEB666] !mb-4 mx-auto" />
-            <h3 className="text-xl font-semibold text-gray-800">
-              Personal Loans
-            </h3>
-            <p className="text-gray-600 !mt-2">
-              Flexible personal loans for various needs.
-            </p>
           </div>
         </div>
       </section>
@@ -132,15 +118,39 @@ export default function About() {
             <FaUserAlt className="h-6 w-6 text-[#CEB666] !mr-3" />
             Competitive Interest Rates
           </li>
+          <li className="flex items-center">
+            <FaBuilding className="h-6 w-6 text-[#CEB666] !mr-3" />
+            Trusted Financial Institutions
+          </li>
+          <li className="flex items-center">
+            <FaWallet className="h-6 w-6 text-[#CEB666] !mr-3" />
+            Easy Loan Management
+          </li>
+          <li className="flex items-center">
+            <FaHandHoldingUsd className="h-6 w-6 text-[#CEB666] !mr-3" />
+            Personalized Financial Support
+          </li>
+          <li className="flex items-center">
+            <FaFileAlt className="h-6 w-6 text-[#CEB666] !mr-3" />
+            Clear and Transparent Paperwork
+          </li>
+          <li className="flex items-center">
+            <FaChartLine className="h-6 w-6 text-[#CEB666] !mr-3" />
+            Financial Growth and Insights
+          </li>
+          <li className="flex items-center">
+            <FaLock className="h-6 w-6 text-[#CEB666] !mr-3" />
+            Secure and Safe Loan Options
+          </li>
         </ul>
       </section>
 
       {/* Contact Section */}
-      <section className="text-center !py-5 md:!py-10">
-        <h2 className="text-3xl font-semibold text-gray-800 !mb-4">
+      <section className="text-center !py-5 md:!py-10 bg-gray-500 text-white rounded">
+        <h2 className="text-3xl font-semibold !mb-4">
           Contact Us Today!
         </h2>
-        <p className="text-lg text-gray-600 !mb-6">
+        <p className="text-lg !mb-6">
           Ready to secure your loan? Contact us now to speak with a loan
           specialist who can help you get started.
         </p>
