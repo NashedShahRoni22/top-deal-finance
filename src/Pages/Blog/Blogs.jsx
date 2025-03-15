@@ -22,7 +22,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <section className="!p-8 md:!p-16">
+    <section className="!py-10 md:!py-20">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-2xl md:text-4xl lg:text-6xl text-center font-semibold">
           Our Blogs

@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-// import "./styles.css";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
@@ -59,11 +58,9 @@ export default function Testimonial() {
           grabCursor={true}
           centeredSlides={true}
           breakpoints={{
-            // Small screens (up to 640px)
             0: {
               slidesPerView: 1,
             },
-            // Large screens (from 769px and above)
             1024: {
               slidesPerView: 2,
             },
@@ -80,18 +77,18 @@ export default function Testimonial() {
             el: ".custom-pagination",
           }}
           modules={[EffectCoverflow, Pagination]}
-          className="mySwiper !p-5 md:!p-10 mt-5"
+          className="mySwiper !py-5 md:!py-10 !mt-5"
         >
           {data.map((d, i) => (
             <SwiperSlide key={i}>
-              <div className="relative !p-4 sm:!p-6 md:!p-8 lg:!p-10 bg-white text-black shadow-xl">
+              <div className="relative !p-5 md:!p-10 bg-white text-black shadow-xl">
                 <div className="flex justify-center">
                   <FaQuoteLeft className="text-4xl sm:text-5xl lg:text-6xl text-[#CEB666]" />
                 </div>
                 <p className="text-base sm:text-lg lg:text-xl !my-2 sm:!my-4">
                   {d.desc}
                 </p>
-                <div className="flex justify-center items-center gap-1 text-[#CEB666] text-base sm:text-xl lg:text-2xl my-2 sm:my-4">
+                <div className="flex justify-center items-center gap-1 text-[#CEB666] text-base sm:text-xl lg:text-2xl !my-2 sm:!my-4">
                   <AiFillStar />
                   <AiFillStar />
                   <AiFillStar />
@@ -106,7 +103,7 @@ export default function Testimonial() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="custom-pagination mt-5 flex gap-2 justify-center"></div>
+        <div className="custom-pagination !mt-5 flex gap-2 justify-center"></div>
       </>
     </div>
   );

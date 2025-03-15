@@ -48,7 +48,7 @@ export default function Navbar() {
           <Link to={"/"}>
             <img
               src={logo}
-              className="hidden lg:block h-[100px] rounded"
+              className="h-[60px] lg:h-[100px] rounded"
               alt=""
             />
           </Link>
@@ -58,7 +58,11 @@ export default function Navbar() {
           {/* Desktop Menus  */}
           <div className="hidden lg:flex gap-8">
             {NavItems.map((navItem, index) => (
-              <Link key={index} to={navItem.link} className="font-semibold hover:text-[#CEB666] ease-linear duration-300">
+              <Link
+                key={index}
+                to={navItem.link}
+                className="font-semibold hover:text-[#CEB666] ease-linear duration-300"
+              >
                 {navItem.name}
               </Link>
             ))}

@@ -51,8 +51,8 @@ export default function Contact() {
   };
 
   return (
-    <section className="mx-5 md:container md:mx-auto !py-10 md:!py-20 min-h-[80vh] flex justify-center items-center">
-      <div className="lg:flex gap-16 flex-1">
+    <section className="!py-10 md:!py-20 min-h-[80vh] flex justify-center items-center">
+      <div className="flex flex-col gap-10 lg:flex-row lg:gap-20 flex-1">
         <div className="lg:w-1/2">
           <div className="">
             <p className="text-primary  text-xl md:text-3xl font-semibold">
@@ -105,7 +105,7 @@ export default function Contact() {
               />
               <button
                 type="submit"
-                className="!px-2 md:!px-4 !py-2 text-xs md:text-base w-fit bg-[#CEB666] text-white rounded flex gap-2 justify-center items-center cursor-pointer"
+                className="!px-6 !py-2.5 text-xs md:text-base w-fit bg-[#CEB666] text-white rounded flex gap-2 justify-center items-center cursor-pointer"
               >
                 Send Message
                 {loader && <FaSpinner className="h-4 w-4 animate-spin" />}
@@ -113,7 +113,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        <div className="mt-5 md:mt-10 lg:mt-0 lg:w-1/2">
+        <div className="lg:w-1/2">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.283025754645!2d151.16386247643464!3d-33.727496811755216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a83daae0d10b%3A0xe3751e7366a4626!2sUnit%20103%2F126A%20Killeaton%20St%2C%20St.%20Ives%20NSW%202075%2C%20Australia!5e0!3m2!1sen!2sbd!4v1741844989583!5m2!1sen!2sbd"
             width="100%"

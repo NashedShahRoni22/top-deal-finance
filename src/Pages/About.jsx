@@ -6,9 +6,9 @@ import { FaBuilding, FaChartLine, FaLock, FaWallet } from "react-icons/fa6";
 
 export default function About() {
   return (
-    <div className="container mx-auto !p-8">
+    <section>
       {/* Header Section */}
-      <section className="flex flex-col md:flex-row items-center !mb-16 !py-5 md:!py-10 gap-8">
+      <div className="flex flex-col md:flex-row items-center !mb-16 !py-5 md:!py-10 gap-8">
         <div className="md:w-1/2">
           <h1 className="text-4xl font-bold text-gray-800">
             About Top Deal Finance
@@ -39,10 +39,10 @@ export default function About() {
         <div className="md:w-1/2">
           <img src="https://pacificfinance.com.au/wp-content/uploads/2021/06/PF-Commercial_0070-1024x727.jpg" />
         </div>
-      </section>
+      </div>
 
       {/* Mission Section */}
-      <section className="flex flex-col md:flex-row-reverse items-center !mb-16 !py-5 md:!py-10 gap-8">
+      <div className="flex flex-col md:flex-row-reverse items-center !mb-16 !py-5 md:!py-10 gap-8">
         <div className="md:w-1/2 !px-6 !mb-6 md:!mb-0">
           <h2 className="text-3xl font-semibold text-gray-800">Our Mission</h2>
           <p className="text-lg text-gray-600 !mt-4">
@@ -60,10 +60,10 @@ export default function About() {
             className="w-full h-auto rounded-lg shadow-lg"
           />
         </div>
-      </section>
+      </div>
 
       {/* Vision Section */}
-      <section className="!mb-16 !py-5">
+      <div className="!mb-16 !py-5">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="md:w-1/2 !px-6 !mb-6 md:!mb-0">
             <h2 className="text-3xl font-semibold text-gray-800">Our Vision</h2>
@@ -88,10 +88,10 @@ export default function About() {
             />
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Why Choose Us Section */}
-      <section className="!mb-16 !py-5 md:!py-10">
+      <div className="!mb-16 !py-5 md:!py-10">
         <h2 className="text-3xl font-semibold text-gray-800 text-center !mb-6">
           Why Choose Top Deal Finance?
         </h2>
@@ -143,10 +143,10 @@ export default function About() {
             Secure and Safe Loan Options
           </li>
         </ul>
-      </section>
+      </div>
 
       {/* Contact Section */}
-      <section className="text-center !py-5 md:!py-10 bg-gray-500 text-white rounded">
+      <div className="text-center !py-5 md:!py-10 bg-gray-500 text-white rounded">
         <h2 className="text-3xl font-semibold !mb-4">
           Contact Us Today!
         </h2>
@@ -160,7 +160,7 @@ export default function About() {
         >
           Get Started
         </Link>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

@@ -52,7 +52,7 @@ export default function Banner() {
             className="lg:!h-[80vh]"
             alt=""
           />
-          <div className="absolute top-0 bg-black/30 h-full w-full z-50 flex justify-center items-center rounded">
+          <div className="absolute top-0 bg-black/30 h-full w-full z-50 flex justify-center items-center">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white">
               {banner.content}
             </h2>
