@@ -43,7 +43,7 @@ export default function ServiceDetails() {
               />
             </div>
 
-            <h1 className="text-xl md:text-3xl text-orange-800 font-bold">
+            <h1 className="text-xl md:text-3xl text-[#CEB666] font-bold">
               {service?.slogan}
             </h1>
             <p className="md:text-xl font-semibold text-primary">

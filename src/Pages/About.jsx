@@ -146,7 +146,7 @@ export default function About() {
       </div>
 
       {/* Contact Section */}
-      <div className="text-center !py-5 md:!py-10 bg-gray-500 text-white rounded">
+      <div className="!mb-5 md:!mb-10 text-center !p-5 md:!p-10 bg-gray-500 text-white rounded">
         <h2 className="text-3xl font-semibold !mb-4">
           Contact Us Today!
         </h2>
@@ -156,7 +156,7 @@ export default function About() {
         </p>
         <Link
           to="/contact"
-          className="inline-block !px-6 !py-2.5 bg-[#CEB666] text-white text-lg font-semibold rounded-lg hover:bg-gray-500 transition duration-300"
+          className="inline-block !px-6 !py-2.5 bg-[#CEB666] text-white text-lg font-semibold rounded-lg border border-[#CEB666] hover:border-white hover:bg-gray-500 transition duration-300"
         >
           Get Started
         </Link>

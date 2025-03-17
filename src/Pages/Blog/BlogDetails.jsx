@@ -40,7 +40,7 @@ export default function BlogDetails() {
                 loading="lazy"
               />
             </div>
-            <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-orange-800">
+            <h1 className="text-xl md:text-2xl lg:text-4xl font-bold text-[#CEB666]">
               {service?.title}
             </h1>
             <p className="text-xl md:text-2xl">{service?.slogan}</p>
