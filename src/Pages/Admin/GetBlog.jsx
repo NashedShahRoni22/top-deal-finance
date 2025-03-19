@@ -10,7 +10,7 @@ export default function GetBlog() {
   //get services
   useEffect(() => {
     setLoading(true);
-    fetch("https://api.homegrowbd.com/api/blogs")
+    fetch("https://api.topdealfinance.com.au/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {
@@ -23,7 +23,7 @@ export default function GetBlog() {
   const deleteService = async (id) => {
     try {
       const response = await fetch(
-        `https://api.homegrowbd.com/api/blog/delete/${id}`,
+        `https://api.topdealfinance.com.au/api/blog/delete/${id}`,
         {
           method: "GET",
         }

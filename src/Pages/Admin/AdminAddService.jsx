@@ -34,7 +34,7 @@ export default function AdminAddService() {
 
     try {
       const response = await fetch(
-        "https://api.homegrowbd.com/api/service/store",
+        "https://api.topdealfinance.com.au/api/service/store",
         {
           method: "POST",
           body: formData,

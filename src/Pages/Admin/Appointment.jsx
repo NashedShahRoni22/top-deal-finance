@@ -9,7 +9,7 @@ const Appointment = () => {
 
   //get appointment
   useEffect(() => {
-    fetch("https://api.homegrowbd.com/api/appointments")
+    fetch("https://api.topdealfinance.com.au/api/appointments")
       .then((res) => res.json())
       .then((data) => {
         setAppointments(data.data);
@@ -24,7 +24,7 @@ const Appointment = () => {
     );
     if (aggre) {
       fetch(
-        `https://api.homegrowbd.com/api/appointment/delete/${oneAppointment.id}`
+        `https://api.topdealfinance.com.au/api/appointment/delete/${oneAppointment.id}`
       )
         .then((res) => res.json())
         .then((data) => {

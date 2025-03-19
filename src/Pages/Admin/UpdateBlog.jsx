@@ -23,7 +23,7 @@ export default function UpdateBlog() {
   // Fetch service details
   useEffect(() => {
     setLoader(true);
-    fetch(`https://api.homegrowbd.com/api/blog-details/${slug}/${id}`)
+    fetch(`https://api.topdealfinance.com.au/api/blog-details/${slug}/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {
@@ -62,7 +62,7 @@ export default function UpdateBlog() {
 
     try {
       const response = await fetch(
-        `https://api.homegrowbd.com/api/blog/update/${id}`,
+        `https://api.topdealfinance.com.au/api/blog/update/${id}`,
         {
           method: "POST",
           body: formData,

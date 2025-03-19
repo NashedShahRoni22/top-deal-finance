@@ -15,7 +15,7 @@ const ContactMessage = () => {
   };
   //get contacts
   useEffect(() => {
-    fetch("https://api.homegrowbd.com/api/contacts")
+    fetch("https://api.topdealfinance.com.au/api/contacts")
       .then((res) => res.json())
       .then((data) => {
         setAppointments(data.data);
@@ -30,7 +30,7 @@ const ContactMessage = () => {
     );
     if (aggre) {
       fetch(
-        `https://api.homegrowbd.com/api/contact/delete/${oneAppointment.id}`
+        `https://api.topdealfinance.com.au/api/contact/delete/${oneAppointment.id}`
       )
         .then((res) => res.json())
         .then((data) => {

@@ -14,7 +14,7 @@ export default function ServiceDetails() {
   //get service
   useEffect(() => {
     setLoader(true);
-    fetch(`https://api.homegrowbd.com/api/services/${url}`)
+    fetch(`https://api.topdealfinance.com.au/api/services/${url}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {

@@ -29,7 +29,7 @@ export default function Contact() {
     formData.append("message", message);
     try {
       const response = await fetch(
-        "https://api.homegrowbd.com/api/contact/store",
+        "https://api.topdealfinance.com.au/api/contact/store",
         {
           method: "POST",
           body: formData,

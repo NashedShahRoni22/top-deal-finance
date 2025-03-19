@@ -12,7 +12,7 @@ export default function BlogDetails() {
   //get service
   useEffect(() => {
     setLoader(true);
-    fetch(`https://api.homegrowbd.com/api/blogs/${url}`)
+    fetch(`https://api.topdealfinance.com.au/api/blogs/${url}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {

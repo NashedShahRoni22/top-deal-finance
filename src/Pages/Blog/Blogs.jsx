@@ -11,7 +11,7 @@ const Blogs = () => {
   //get services
   useEffect(() => {
     setLoading(true);
-    fetch("https://api.homegrowbd.com/api/blogs")
+    fetch("https://api.topdealfinance.com.au/api/blogs")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {

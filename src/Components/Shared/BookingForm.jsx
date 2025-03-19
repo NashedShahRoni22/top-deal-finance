@@ -15,7 +15,7 @@ export default function BookingForm() {
 
   //get services
   useEffect(() => {
-    fetch("https://api.homegrowbd.com/api/services")
+    fetch("https://api.topdealfinance.com.au/api/services")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === true) {
@@ -38,7 +38,7 @@ export default function BookingForm() {
     formData.append("message", message);
     try {
       const response = await fetch(
-        "https://api.homegrowbd.com/api/appointment/store",
+        "https://api.topdealfinance.com.au/api/appointment/store",
         {
           method: "POST",
           body: formData,
