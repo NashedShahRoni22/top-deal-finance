@@ -3,31 +3,32 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import logo from "../../assets/SideLogo.png";
+import NavItems from "./NavItems";
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
-  const NavItems = [
-    {
-      name: "Home",
-      link: "/",
-    },
-    {
-      name: "Services",
-      link: "/services",
-    },
-    {
-      name: "About",
-      link: "/about",
-    },
-    {
-      name: "Contact",
-      link: "/contact",
-    },
-    {
-      name: "Blogs",
-      link: "/blogs",
-    },
-  ];
+  // const NavItems = [
+  //   {
+  //     name: "Home",
+  //     link: "/",
+  //   },
+  //   {
+  //     name: "Services",
+  //     link: "/services",
+  //   },
+  //   {
+  //     name: "About",
+  //     link: "/about",
+  //   },
+  //   {
+  //     name: "Contact",
+  //     link: "/contact",
+  //   },
+  //   {
+  //     name: "Blogs",
+  //     link: "/blogs",
+  //   },
+  // ];
   return (
     <nav className="!py-5 relative bg-[#110D0E] text-white">
       <div className="flex items-center justify-between !mx-5 md:w-5/6 md:!mx-auto">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import NavItems from "./NavItems";
 
 export default function Footer() {
   return (
@@ -39,46 +40,17 @@ export default function Footer() {
                 Quick Links
               </h4>
               <ul className="space-y-2 !mt-4 text-center md:text-left">
-                <li>
-                  <Link
-                    to="/"
-                    className="hover:text-yellow-400 transition duration-300"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services"
-                    className="hover:text-yellow-400 transition duration-300"
-                  >
-                    Secvices
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about"
-                    className="hover:text-yellow-400 transition duration-300"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contact"
-                    className="hover:text-yellow-400 transition duration-300"
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/blogs"
-                    className="hover:text-yellow-400 transition duration-300"
-                  >
-                    Blogs
-                  </Link>
-                </li>
+                {NavItems.map((navItem, index) => (
+                  <li>
+                    <Link
+                      key={index}
+                      to={navItem.link}
+                      className="hover:text-yellow-400 transition duration-300"
+                    >
+                      {navItem.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
